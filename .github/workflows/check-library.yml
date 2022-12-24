@@ -1,0 +1,33 @@
+name: Check Library
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  typecheck-lint-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11']
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - uses: snok/install-poetry@v1
+      with:
+        version: 1.3.1
+    - name: Install dependencies
+      working-directory: ./ipsum
+      run: poetry install --with=typing,test,lint
+    - name: Run typechecker
+      working-directory: ./ipsum
+      run: poetry run mypy src/ tests/
+    - name: Run linter
+      working-directory: ./ipsum
+      run: poetry run flake8
+    - name: Run tests
+      working-directory: ./ipsum
+      run: poetry run pytest

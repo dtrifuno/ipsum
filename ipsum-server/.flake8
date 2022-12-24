@@ -1,0 +1,10 @@
+[flake8]
+select = ANN,B,B9,BLK,C,D,DAR,E,F,I,S,W
+ignore = E203,E501,W503,ANN101,ANN102,ANN401,D100,S311
+max-line-length = 80
+application-import-names = ipsum_server,tests
+docstring-convention = google
+import-order-style = google
+extend-immutable-calls = fastapi.Depends, fastapi.Query, fastapi.Path
+per-file-ignores = 
+  tests/*: S101

@@ -1,0 +1,33 @@
+name: Check Client
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - name: Install dependencies and run typechecker
+      working-directory: ./ipsum-client
+      run: |
+        yarn install --frozen-lockfile
+        yarn typecheck
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - name: Install dependencies and run linter
+      working-directory: ./ipsum-client
+      run: |
+        yarn install --frozen-lockfile
+        yarn lint

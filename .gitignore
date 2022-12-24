@@ -1,0 +1,15 @@
+.coverage
+coverage.xml
+__pycache__/
+.pytest_cache/
+.next/
+.vscode/
+.python_version
+dist/
+build/
+out/
+node_modules/
+.mypy_cache/
+.nox/
+ipsum/diagnostics
+.ipynb_checkpoints/

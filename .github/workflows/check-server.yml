@@ -1,0 +1,55 @@
+name: Check Server
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    - uses: snok/install-poetry@v1
+      with:
+        version: 1.3.1
+    - name: Install dependencies and typecheck
+      working-directory: ./ipsum-server
+      run: |
+        poetry install --only=typing
+        poetry run mypy src/ tests/
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.11' 
+    - uses: snok/install-poetry@v1
+      with:
+        version: 1.3.1
+    - name: Install dependencies and run linter
+      working-directory: ./ipsum-server
+      run: |
+        poetry install --only=lint
+        poetry run flake8
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.11' 
+    - uses: snok/install-poetry@v1
+      with:
+        version: 1.3.1
+    - name: Install dependencies and run tests
+      working-directory: ./ipsum-server
+      run: |
+        poetry install --only=main,test
+        poetry run pytest
