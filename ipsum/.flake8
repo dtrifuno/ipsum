@@ -1,0 +1,10 @@
+[flake8]
+select = ANN,B,B9,BLK,C,D,DAR,E,F,I,S,W
+ignore = E203,E501,W503,ANN101,ANN102,ANN401,D100,S105,S311,B905
+max-line-length = 80
+application-import-names = ipsum,tests
+docstring-convention = google
+import-order-style = google
+per-file-ignores = 
+  tests/*: S101,D103
+  src/ipsum/dev/model_diagnostics.py: ANN

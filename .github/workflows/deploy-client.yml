@@ -1,0 +1,29 @@
+name: Deploy Client
+
+on:
+  push:
+    tags:
+      - client-v*
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - name: Install dependencies and build client
+      working-directory: ./ipsum-client
+      run: |
+        yarn install --frozen-lockfile
+        yarn export
+        ls -la out
+    - uses: burnett01/rsync-deployments@5.2.1
+      with:
+        switches: -avzr --delete
+        path: ./ipsum-client/out/
+        remote_user: ${{ secrets.DEPLOY_USER }}
+        remote_host: ${{ secrets.DEPLOY_HOST }}
+        remote_path: ${{ secrets.DEPLOY_PATH }}
+        remote_key: ${{ secrets.DEPLOY_KEY }}
