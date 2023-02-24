@@ -21,6 +21,8 @@ jobs:
     - name: Build and push image to Docker Hub
       uses: docker/build-push-action@v3
       with:
+        file: ipsum-server/Dockerfile
+        context: ./ipsum-server
         push: true
         tags: dtrifuno/ipsum-server:latest
 
