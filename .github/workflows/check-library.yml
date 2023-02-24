@@ -28,7 +28,7 @@ jobs:
 
     - name: Install dependencies
       working-directory: ./ipsum
-      run: poetry install --with=typing,test,lint
+      run: poetry install --with=main,typing,test,lint
 
     - name: Run typechecker
       working-directory: ./ipsum

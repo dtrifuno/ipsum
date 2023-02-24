@@ -1,6 +1,6 @@
 # ipsum
 
-[![Tests](https://github.com/dtrifuno/ipsum/workflows/check-library/badge.svg)](https://github.com/dtrifuno/ipsum/actions?workflow=check-library)
+[![Check Library](https://github.com/dtrifuno/ipsum/actions/workflows/check-library.yml/badge.svg)](https://github.com/dtrifuno/ipsum/actions/workflows/check-library.yml)
 [![PyPI version](https://badge.fury.io/py/ipsum.svg)](https://badge.fury.io/py/ipsum)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 

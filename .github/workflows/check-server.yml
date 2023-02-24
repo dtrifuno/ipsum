@@ -24,7 +24,7 @@ jobs:
 
     - name: Install dependencies 
       working-directory: ./ipsum-server
-      run: poetry install --only=typing
+      run: poetry install --only=main,typing
 
     - name: Run typechecker
       working-directory: ./ipsum-server

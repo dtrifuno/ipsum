@@ -1,6 +1,6 @@
 # ipsum-client
 
-[![Tests](https://github.com/dtrifuno/ipsum/workflows/check-client/badge.svg)](https://github.com/dtrifuno/ipsum/actions?workflow=check-client)
+[![Check Client](https://github.com/dtrifuno/ipsum/actions/workflows/check-client.yml/badge.svg)](https://github.com/dtrifuno/ipsum/actions/workflows/check-client.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This is a [Next.js](https://nextjs.org/) frontend to the
