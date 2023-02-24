@@ -6,7 +6,6 @@ readme = "README.md"
 authors = ["Darko Trifunovski <darko@trifunovski.me>"]
 license = "MIT"
 exclude = ["src/ipsum/dev/"]
-include = ["trained_models/"]
 
 [tool.poetry.scripts]
 dev = 'ipsum.dev.main:app'

@@ -49,5 +49,5 @@ def load_model(language: Union[str, SupportedLanguage]) -> LanguageModel:
 
 def _get_models_dir_path() -> str:
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    models_dir_path = os.path.join(dir_path, "..", "..", "..", "trained_models")
+    models_dir_path = os.path.join(dir_path, "..", "trained_models")
     return models_dir_path

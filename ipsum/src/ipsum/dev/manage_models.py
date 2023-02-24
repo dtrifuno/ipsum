@@ -31,7 +31,7 @@ def _train_and_save_model(
         model = LanguageModel.from_corpus(parser, corpus)
 
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        models_dir_path = os.path.join(dir_path, "..", "..", "..", "trained_models")
+        models_dir_path = os.path.join(dir_path, "..", "trained_models")
         model_path = os.path.join(models_dir_path, f"{language.value}.zip")
 
         model.save_model(model_path)
