@@ -28,22 +28,22 @@ const About = () => {
               If instead you would like to use the Ipsum placeholder text
               generator as a Python library in your own project,{' '}
               <a
+                href="https://pypi.org/project/ipsum/"
                 className="text-orange-500 hover:border-b-2 border-orange-500"
-                href="#"
               >
                 check out the Ipsum package on PyPI.
               </a>{' '}
               If you would like to learn more about how Ipsum works, you can
               check out{' '}
               <a
-                href="#"
+                href="https://github.com/dtrifuno/ipsum"
                 className="text-orange-500 hover:border-b-2 border-orange-500"
               >
                 the source code on Github,
               </a>{' '}
               or{' '}
               <a
-                href="#"
+                href="https://trifunovski.me/posts/230225-lorem-ipsum-or-the-procedural-generation-of-typographically-plausible-nonsense"
                 className="text-orange-500 hover:border-b-2 border-orange-500"
               >
                 read this blog post
