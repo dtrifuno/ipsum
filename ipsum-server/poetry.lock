@@ -599,14 +599,14 @@ files = [
 
 [[package]]
 name = "ipsum"
-version = "0.1.0"
+version = "0.1.1"
 description = "Library for procedurally-generating text that resembles a particular language."
 category = "main"
 optional = false
 python-versions = ">=3.8.1,<4.0.0"
 files = [
-    {file = "ipsum-0.1.0-py3-none-any.whl", hash = "sha256:b3be920486d748f5eaf461cfef3e88922f13e590bb9efb45944153cb055320f5"},
-    {file = "ipsum-0.1.0.tar.gz", hash = "sha256:5557b3af00b6e353646fff324b64a76fc88d78967321d3469bcd612c56a2d014"},
+    {file = "ipsum-0.1.1-py3-none-any.whl", hash = "sha256:cea8672488aefb3af920eff0abce26396e6eb49cf243727e2163898227131337"},
+    {file = "ipsum-0.1.1.tar.gz", hash = "sha256:1fa215421c059313537b888f6a805f705a403a75ab3b78d5d27cd08d62637c9d"},
 ]
 
 [package.dependencies]
@@ -1257,4 +1257,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "7b745a4451b7dac2fda769877fd4a820a8a7a44cd1ed1712b1f59e028922e226"
+content-hash = "8edc91bd4fd7df255bc164ff7d22ef159d9dadac0f3a7e47db5bed110d884ed4"

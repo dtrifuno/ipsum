@@ -11,7 +11,7 @@ python = "^3.11"
 fastapi = "^0.88.0"
 uvicorn = "^0.20.0"
 slowapi = "^0.1.7"
-ipsum = "^0.1.0"
+ipsum = "^0.1.1"
 redis = "^3.4.1"
 
 [tool.poetry.group.typing.dependencies]
