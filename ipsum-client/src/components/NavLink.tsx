@@ -16,8 +16,10 @@ const NavLink = ({
   children,
 }: NavLinkProps) => {
   const {asPath} = useRouter();
+  const cleanPath = asPath.split(/[?#]/)[0];
+
   const actualClassName =
-    asPath === href ? `${className} ${activeClassName}` : className;
+    cleanPath === href ? `${className} ${activeClassName}` : className;
 
   return (
     <Link className={actualClassName} href={href}>
