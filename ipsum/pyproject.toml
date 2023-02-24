@@ -1,12 +1,11 @@
 [tool.poetry]
 name = "ipsum"
-version = "0.1.0"
+version = "0.1.1"
 description = "Library for procedurally-generating text that resembles a particular language."
 readme = "README.md"
 authors = ["Darko Trifunovski <darko@trifunovski.me>"]
 license = "MIT"
 exclude = ["src/ipsum/dev/"]
-include = ["trained_models/"]
 
 [tool.poetry.scripts]
 dev = 'ipsum.dev.main:app'
