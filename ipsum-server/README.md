@@ -1,6 +1,6 @@
 # ipsum-server
 
-[![Tests](https://github.com/dtrifuno/ipsum/workflows/check-server/badge.svg)](https://github.com/dtrifuno/ipsum/actions?workflow=check-server)
+[![Check Server](https://github.com/dtrifuno/ipsum/actions/workflows/check-server.yml/badge.svg)](https://github.com/dtrifuno/ipsum/actions/workflows/check-server.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A FastAPI web app providing REST API access to the
