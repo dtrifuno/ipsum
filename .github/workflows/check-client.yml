@@ -9,25 +9,37 @@ jobs:
   typecheck:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Node
+      uses: actions/setup-node@v3
       with:
         node-version: 16
-    - name: Install dependencies and run typechecker
+
+    - name: Install dependencies 
       working-directory: ./ipsum-client
-      run: |
-        yarn install --frozen-lockfile
-        yarn typecheck
+      run: yarn install --frozen-lockfile
+
+    - name: Run typechecker
+      working-directory: ./ipsum-client
+      run: yarn typecheck
 
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node
+      uses: actions/setup-node@v3
       with:
         node-version: 16
-    - name: Install dependencies and run linter
+
+    - name: Install dependencies 
       working-directory: ./ipsum-client
-      run: |
-        yarn install --frozen-lockfile
-        yarn lint
+      run: yarn install --frozen-lockfile
+
+    - name: Run linter
+      working-directory: ./ipsum-client
+      run: yarn lint

@@ -9,47 +9,71 @@ jobs:
   typecheck:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
       with:
         python-version: '3.11'
-    - uses: snok/install-poetry@v1
+
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
       with:
         version: 1.3.1
-    - name: Install dependencies and typecheck
+
+    - name: Install dependencies 
       working-directory: ./ipsum-server
-      run: |
-        poetry install --only=typing
-        poetry run mypy src/ tests/
+      run: poetry install --only=typing
+
+    - name: Run typechecker
+      working-directory: ./ipsum-server
+      run: poetry run mypy src/ tests/
 
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
       with:
-        python-version: '3.11' 
-    - uses: snok/install-poetry@v1
+        python-version: '3.11'
+
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
       with:
         version: 1.3.1
-    - name: Install dependencies and run linter
+
+    - name: Install dependencies 
       working-directory: ./ipsum-server
-      run: |
-        poetry install --only=lint
-        poetry run flake8
+      run: poetry install --only=lint
+
+    - name: Run linter
+      working-directory: ./ipsum-server
+      run: poetry run flake8
 
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
       with:
         python-version: '3.11' 
-    - uses: snok/install-poetry@v1
+
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
       with:
         version: 1.3.1
-    - name: Install dependencies and run tests
+
+    - name: Install dependencies 
       working-directory: ./ipsum-server
-      run: |
-        poetry install --only=main,test
-        poetry run pytest
+      run: poetry install --only=main,test
+
+    - name: Run tests
+      working-directory: ./ipsum-server
+      run: poetry run pytest
