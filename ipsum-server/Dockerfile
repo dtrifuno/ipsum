@@ -3,7 +3,7 @@ FROM python:3.11-slim-bullseye AS build-image
 WORKDIR /root
 
 RUN pip install poetry
-COPY pyproject.toml poetry.lock ./
+COPY README.md LICENSE.md pyproject.toml poetry.lock ./
 RUN poetry export --only=main --format=requirements.txt --without-hashes --output="requirements.txt"
 
 COPY src/ ./
