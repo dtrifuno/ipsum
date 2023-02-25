@@ -3,7 +3,7 @@ name: Deploy Client
 on:
   push:
     tags:
-      - client-v*
+      - client-latest
 
 jobs:
   build-and-deploy:

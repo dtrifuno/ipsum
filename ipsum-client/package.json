@@ -1,6 +1,5 @@
 {
   "name": "ipsum-client",
-  "version": "0.1.0",
   "description": "A web client for the Ipsum placeholder text generator.",
   "homepage": "https://github.com/dtrifuno/ipsum",
   "author": "Darko Trifunovski <darko@trifunovski.me> (https://trifunovski.me)",
