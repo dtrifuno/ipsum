@@ -23,6 +23,6 @@ RUN rm -rf /tmp/*
 
 ENV APP_ENV=production
 ENV APP_PORT=8000
-ENV APP_HOST=127.0.0.1
+ENV APP_HOST=0.0.0.0
 
 CMD ["python", "-m", "ipsum_server.app"]

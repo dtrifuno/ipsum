@@ -7,7 +7,7 @@ A FastAPI web app providing REST API access to the
 [Ipsum](https://github.com/dtrifuno/ipsum/) placeholder text generator library.
 
 A deployed copy of the server can be accessed at
-[ipsum.trifunovski.me/api/v1](https://ipsum.trifunovski.me/api/v1),
+[ipsum.trifunovski.me/api/v1](https://ipsum.trifunovski.me/api/v1/docs),
 or through the frontend at [ipsum.trifunovski.me](https://ipsum.trifunovski.me/).
 
 ## Development
@@ -38,7 +38,7 @@ to test the code.
 
 ## Docker
 
-This application is available as a Docker container image on [Docker Hub](https://hub.docker.com/dtrifuno/ipsum).
+This application is available as a Docker container image on [Docker Hub](https://hub.docker.com/r/dtrifuno/ipsum-server).
 
 ## Environment variables
 
@@ -49,7 +49,7 @@ that you would like the application to allow.
 
 ### `APP_HOST`
 
-Host that `uvicorn` should attempt to bind to. Defaults to `127.0.0.1`.
+Host that `uvicorn` should attempt to bind to. Defaults to `0.0.0.0`.
 
 ### `APP_PORT`
 
