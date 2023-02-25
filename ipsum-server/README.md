@@ -70,4 +70,4 @@ limiter will just store the data in-memory.
 
 ## License
 
-[MIT](https://github.com/dtrifuno/ipsum/ipsum-server/blob/main/LICENSE.md)
+[MIT](https://raw.githubusercontent.com/dtrifuno/ipsum/main/ipsum-server/LICENSE.md)

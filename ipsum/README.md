@@ -143,4 +143,4 @@ The models were trained on the following corpora:
 
 ## License
 
-[MIT](https://github.com/dtrifuno/ipsum/ipsum/blob/main/LICENSE.md)
+[MIT](https://raw.githubusercontent.com/dtrifuno/ipsum/main/ipsum/LICENSE.md)

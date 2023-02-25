@@ -39,4 +39,4 @@ and copy the `out/` folder to the deployment server.
 
 ## License
 
-[MIT](https://github.com/dtrifuno/ipsum/ipsum-client/blob/main/LICENSE.md)
+[MIT](https://raw.githubusercontent.com/dtrifuno/ipsum/main/ipsum-client/LICENSE.md)
