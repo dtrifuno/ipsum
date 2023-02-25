@@ -34,7 +34,7 @@ def main() -> None:
     env_app_port = os.getenv("APP_PORT")
     if env_app_port is not None:
         port = int(env_app_port)
-    host = os.getenv("APP_HOST") or "127.0.0.1"
+    host = os.getenv("APP_HOST") or "0.0.0.0"  # noqa: S104
     uvicorn.run(app, host=host, port=port)
 
 
