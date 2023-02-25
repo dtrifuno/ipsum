@@ -24,7 +24,7 @@ const Header: React.FC = () => {
             priority
           />
         </Link>
-        <div className="text-sm sm:text-lg md:text-xl font-semibold text-black md:mt-0 mt-2">
+        <div className="text-sm sm:text-base md:text-lg font-semibold text-gray-700 md:mt-1.5 mt-2">
           the international placeholder text generator
         </div>
         <nav>
